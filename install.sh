@@ -245,7 +245,7 @@ echo_main_menu(){
 echo_main_menu_and_take_user_choice(){
 	while true; do
 		echo_main_menu
-		read -p "Input your choice" choice
+		read -p "Input your choice: " choice
 		case $choice in
 			1)
 				install_trojan
