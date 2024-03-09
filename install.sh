@@ -237,7 +237,7 @@ delete_stop_service(){
 }
 
 echo_main_menu(){
-	echo "1. Install trojan(If you ever executed [Install trojan] before, it's recommanded to run [Delete trojan] first)"
+	echo "1. Install trojan(If you ever executed [Install trojan] before, you must run [Delete trojan] first)"
 	echo "2. Delete trojan"
 	echo "0. Exit"
 }
