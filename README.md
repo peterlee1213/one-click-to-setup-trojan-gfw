@@ -8,7 +8,8 @@
 ubuntu 20.04+ and debian 10.8+
 
 ## Requirement
-At least one public IPv4 address
+1. At least one public IPv4 address
+2. 443 port accessible from public network
 
 ## How to run：
 `sudo bash install.sh`
