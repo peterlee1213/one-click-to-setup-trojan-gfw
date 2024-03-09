@@ -6,7 +6,7 @@ domain=
 #default password, ie. default_passwd=admin
 default_passwd=
 #url to fake website template, git repository url required
-web_template=https://github.com:peterlee1213/a_third_party_static_web_template.git
+web_template=https://github.com/peterlee1213/a_third_party_static_web_template
 
 apps_to_be_installed="trojan apache2 tar git certbot"  #apps to be installed in【Install trojan】
 apps_to_be_removed="trojan apache2 git certbot" #apps to be removed in【Delete trojan】
