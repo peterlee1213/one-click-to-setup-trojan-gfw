@@ -81,7 +81,7 @@ check_assign_var_domain(){
 check_if_domain_pointed_to_localhost(){
 	apt-get update
 	apt-get install host curl -y
-	local pub_ip=$(curl ifconfig.me)
+	local pub_ip=$(curl -4 ifconfig.me)
 	if host $1 | fgrep $pub_ip &> /dev/null; then
 		return 0
 	else
