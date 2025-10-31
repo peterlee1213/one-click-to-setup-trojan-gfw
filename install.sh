@@ -161,6 +161,11 @@ install_cert(){
 	chmod 444 $trojan_keys_dir/*.pem
 }
 
+delete_cert(){
+	rm -rf $certbot_certs_dir/${domain}*
+	rm -rf $trojan_keys_dir/*.pem
+}
+
 install_modify_trojan_config(){
 	[ -e $trojan_config_dir/config.json ] && mv $trojan_config_dir/config.json{,.backup}
 cat << EOF > $trojan_config_dir/config.json
@@ -239,6 +244,7 @@ delete_stop_service(){
 echo_main_menu(){
 	echo "1. Install trojan(If you ever executed [Install trojan] before, you must run [Delete trojan] first)"
 	echo "2. Delete trojan"
+	echo "3. Reinstall cert"
 	echo "0. Exit"
 }
 
@@ -253,6 +259,11 @@ echo_main_menu_and_take_user_choice(){
 				;;
 			2)
 				delete_trojan
+				break
+				;;
+			3)
+				delete_cert
+				install_cert
 				break
 				;;
 			0)
